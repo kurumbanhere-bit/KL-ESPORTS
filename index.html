@@ -21,7 +21,6 @@
             flex-direction: column;
             padding: 25px;
             overflow-x: hidden;
-            text-align: center;
         }
 
         header {
@@ -32,84 +31,67 @@
         }
 
         .logo-top {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             border: 2px solid #ff0000;
-            box-shadow: 0 0 15px #ff0000;
         }
 
-        .container {
-            max-width: 500px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        h1 {
-            font-size: 26px;
-            margin-bottom: 15px;
-            color: #ff0000;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 15px;
-            color: #ccc;
-            margin-bottom: 30px;
+        .main-content {
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .download-btn {
             display: inline-block;
             background: linear-gradient(45deg, #ff0000, #990000);
             color: white;
-            padding: 18px 45px;
+            padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 20px;
-            transition: 0.3s;
+            font-size: 18px;
+            margin-bottom: 20px;
             box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
         }
 
-        .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.6);
-        }
-
-        .warning-box {
-            margin-top: 30px;
-            font-size: 13px;
-            color: #ffcc00;
-            background: rgba(255, 204, 0, 0.1);
+        /* ക്രോം വാർണിംഗിനായി ഞാൻ ആഡ് ചെയ്ത ഭാഗം */
+        .chrome-note {
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.05);
             padding: 15px;
             border-radius: 12px;
+            border-left: 4px solid #ffcc00;
+            font-size: 13px;
+            color: #eee;
             line-height: 1.5;
-            border: 1px dashed rgba(255, 204, 0, 0.3);
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .chrome-note strong {
+            color: #ffcc00;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="https://kerala-esports.com/wp-content/uploads/2024/logo.png" alt="Kerala Esports" class="logo-top" onerror="this.style.display='none'">
+        <img src="https://kerala-esports.com/wp-content/uploads/2024/logo.png" alt="Logo" class="logo-top" onerror="this.style.display='none'">
     </header>
 
-    <div class="container">
-        <h1>Kerala Esports</h1>
-        <p>Official Tournament App. Secure & Fast.</p>
-
+    <div class="main-content">
         <a href="https://drive.google.com/uc?export=download&id=1RjlGFM37XV4O2PC_9eFB07CnSe_3iujj" class="download-btn">
             <i class="fas fa-download"></i> DOWNLOAD APK
         </a>
 
-        <div class="warning-box">
-            <i class="fas fa-shield-alt"></i> 100% Verified & Safe.<br>
-            If Chrome shows a security warning, click <strong>"Download Anyway"</strong> to start.
+        <div class="chrome-note">
+            <i class="fas fa-shield-alt" style="color: #00ff00;"></i> <strong>100% Safe & Verified</strong><br>
+            Chrome might show a "File might be harmful" warning. This is normal for APKs. Click <strong>"Download Anyway"</strong> to continue.
         </div>
     </div>
 
