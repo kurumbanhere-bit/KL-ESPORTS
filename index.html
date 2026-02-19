@@ -14,7 +14,6 @@
 
         body {
             font-family: 'Segoe UI', Roboto, sans-serif;
-            /* Deep Gaming Gradient */
             background: radial-gradient(circle at top, #330000 0%, #000000 100%);
             color: white;
             min-height: 100vh;
@@ -22,196 +21,97 @@
             flex-direction: column;
             padding: 25px;
             overflow-x: hidden;
+            text-align: center;
         }
 
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             margin-bottom: 30px;
         }
 
         .logo-top {
-            width: 80px;
-            height: 80px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px solid #ff3333;
-            box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 15px #ff0000;
         }
 
-        .logo-top img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .menu-icon {
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
             background: rgba(255, 255, 255, 0.05);
-            padding: 12px;
-            border-radius: 10px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .content {
-            margin-top: 20px;
-        }
-
         h1 {
-            font-size: 38px;
-            font-weight: 900;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            background: linear-gradient(to right, #ffffff, #ff3333);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-        }
-
-        .info-list {
-            margin-top: 20px;
-        }
-
-        .info-item {
-            font-size: 14px;
+            font-size: 26px;
             margin-bottom: 15px;
+            color: #ff0000;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-weight: 600;
+        }
+
+        p {
+            font-size: 15px;
             color: #ccc;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .info-item i {
-            color: #ff3333;
-            font-size: 12px;
-        }
-
-        .btn-container {
-            margin: 40px 0;
+            margin-bottom: 30px;
         }
 
         .download-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 40px;
-            background: #ff3333;
-            border-radius: 50px;
+            display: inline-block;
+            background: linear-gradient(45deg, #ff0000, #990000);
             color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
             text-decoration: none;
-            font-size: 16px;
-            font-weight: 800;
-            text-transform: uppercase;
-            transition: 0.4s;
-            box-shadow: 0 5px 25px rgba(255, 51, 51, 0.4);
-            border: none;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
         }
 
         .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(255, 51, 51, 0.6);
-            background: #e60000;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.6);
         }
 
-        .download-btn i {
-            font-size: 20px;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-5px);}
-            60% {transform: translateY(-3px);}
-        }
-
-        .banner-container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-top: auto;
-            padding-bottom: 20px;
-        }
-
-        .main-banner {
-            width: 100%;
-            max-width: 280px;
-            border-radius: 20px;
-            filter: drop-shadow(0 0 20px rgba(255, 51, 51, 0.2));
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        footer {
-            text-align: center;
-            padding-bottom: 20px;
-        }
-
-        .footer-note {
-            font-size: 10px;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .privacy-link {
-            color: #ff3333;
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.8;
-        }
-
-        .privacy-link:hover {
-            opacity: 1;
-            text-decoration: underline;
+        .warning-box {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #ffcc00;
+            background: rgba(255, 204, 0, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            line-height: 1.5;
+            border: 1px dashed rgba(255, 204, 0, 0.3);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-top">
-            <img src="LOGO.png" alt="KL Logo">
-        </div>
-        <div class="menu-icon">
-            <i class="fa-solid fa-bars" style="color: white; font-size: 20px;"></i>
-        </div>
+        <img src="https://kerala-esports.com/wp-content/uploads/2024/logo.png" alt="Kerala Esports" class="logo-top" onerror="this.style.display='none'">
     </header>
 
-    <div class="content">
-        <h1>KERALA<br>ESPORTS</h1>
-        <div class="info-list">
-            <p class="info-item"><i class="fa-solid fa-gamepad"></i> ESPORT PLATFORM</p>
-            <p class="info-item"><i class="fa-solid fa-shield-halved"></i> FREE FIRE </p>
-            <p class="info-item"><i class="fa-solid fa-bolt"></i> BOOST YOUR GAMING SKILL</p>
+    <div class="container">
+        <h1>Kerala Esports</h1>
+        <p>Official Tournament App. Secure & Fast.</p>
+
+        <a href="https://drive.google.com/uc?export=download&id=1RjlGFM37XV4O2PC_9eFB07CnSe_3iujj" class="download-btn">
+            <i class="fas fa-download"></i> DOWNLOAD APK
+        </a>
+
+        <div class="warning-box">
+            <i class="fas fa-shield-alt"></i> 100% Verified & Safe.<br>
+            If Chrome shows a security warning, click <strong>"Download Anyway"</strong> to start.
         </div>
     </div>
-
-    <div class="btn-container">
-        <a href="https://drive.google.com/uc?export=download&id=1RjlGFM37XV4O2PC_9eFB07CnSe_3iujj" class="download-btn">
-            <i class="fa-solid fa-cloud-arrow-down"></i> DOWNLOAD NOW
-        </a>
-    </div>
-
-    <div class="banner-container">
-        <img src="LOGO.png" alt="Banner" class="main-banner">
-    </div>
-    
-    <footer>
-        <p class="footer-note">v1.0.2 • SAFE & SECURE</p>
-        <a href="privacy.html" class="privacy-link">Privacy Policy & Terms</a>
-    </footer>
 
 </body>
 </html>
