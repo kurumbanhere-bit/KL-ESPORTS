@@ -3,93 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grind Battle - Download</title>
+    <title>Kerala Esports - Download App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background: linear-gradient(to bottom, #1a2a44, #2575fc);
-            height: 100vh;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: radial-gradient(circle at top, #330000 0%, #000000 100%);
+            color: white;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            padding: 25px;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            color: white;
-            text-align: center;
-            padding-top: 50px;
+            margin-bottom: 30px;
         }
 
         .logo-top {
             width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #ff3333;
+            box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+        }
+
+        .logo-top img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .menu-icon {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
             border-radius: 10px;
-            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .content {
+            margin-top: 20px;
         }
 
         h1 {
-            font-size: 24px;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            font-size: 38px;
+            font-weight: 900;
+            margin-bottom: 10px;
             text-transform: uppercase;
+            background: linear-gradient(to right, #ffffff, #ff3333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
         }
 
-        .info-text {
+        .info-list {
+            margin-top: 20px;
+        }
+
+        .info-item {
             font-size: 14px;
-            color: #bdc3c7;
-            margin-bottom: 8px;
+            margin-bottom: 15px;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #ccc;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item i {
+            color: #ff3333;
+            font-size: 12px;
+        }
+
+        .btn-container {
+            margin: 40px 0 20px 0;
         }
 
         .download-btn {
-            background-color: #4a5568;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 40px;
+            background: #ff3333;
+            border-radius: 50px;
             color: white;
-            padding: 12px 30px;
-            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 25px;
-            border: 1px solid #718096;
-            transition: 0.3s;
+            font-size: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+            transition: 0.4s;
+            box-shadow: 0 5px 25px rgba(255, 51, 51, 0.4);
+            border: none;
+            cursor: pointer;
         }
 
         .download-btn:hover {
-            background-color: #2d3748;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 51, 51, 0.6);
+            background: #e60000;
+        }
+
+        .download-btn i {
+            font-size: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        .chrome-warning-note {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #ffcc00;
+            padding: 12px;
+            margin-bottom: 20px;
+            max-width: 300px;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #ddd;
+        }
+
+        .chrome-warning-note strong {
+            color: #ffcc00;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-5px);}
+            60% {transform: translateY(-3px);}
+        }
+
+        .banner-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+            padding-bottom: 20px;
         }
 
         .main-banner {
-            margin-top: 50px;
-            width: 90%;
-            max-width: 400px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 280px;
+            border-radius: 20px;
+            filter: drop-shadow(0 0 20px rgba(255, 51, 51, 0.2));
+            animation: float 3s ease-in-out infinite;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 480px) {
-            h1 { font-size: 20px; }
-            .main-banner { width: 85%; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        footer {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .footer-note {
+            font-size: 10px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .privacy-link {
+            color: #ff3333;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        .privacy-link:hover {
+            opacity: 1;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <img src="https://i.ibb.co/vzB7K9y/logo.png" alt="Logo" class="logo-top">
+    <header>
+        <div class="logo-top">
+            <img src="LOGO.png" alt="KL Logo">
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" style="color: white; font-size: 20px;"></i>
+        </div>
+    </header>
 
-    <h1>GRIND BATTLE</h1>
+    <div class="content">
+        <h1>KERALA<br>ESPORTS</h1>
+        <div class="info-list">
+            <p class="info-item"><i class="fa-solid fa-gamepad"></i> ESPORT PLATFORM</p>
+            <p class="info-item"><i class="fa-solid fa-shield-halved"></i> FREE FIRE AND BGMI</p>
+            <p class="info-item"><i class="fa-solid fa-bolt"></i> BOOST YOUR GAMING SKILL</p>
+        </div>
+    </div>
 
-    <p class="info-text">AN ESPORT PLATFORM</p>
-    <p class="info-text">FREE FIRE AND BGMI</p>
-    <p class="info-text">BOOST YOUR GAMING SKILL</p>
+    <div class="btn-container">
+        <a href="https://drive.google.com/uc?export=download&id=1RjlGFM37XV4O2PC_9eFB07CnSe_3iujj" 
+           class="download-btn" 
+           download="KL_ESPORTS.apk">
+            <i class="fa-solid fa-cloud-arrow-down"></i> DOWNLOAD NOW
+        </a>
+    </div>
 
-    <a href="https://drive.google.com/uc?export=download&id=1RjlGFM37XV4O2PC_9eFB07CnSe_3iujj" class="download-btn">
-        DOWNLOAD APP
-    </a>
+    <div class="chrome-warning-note">
+        <i class="fa-solid fa-shield-check" style="color: #00ff00;"></i> <strong>Safe & Verified.</strong><br>
+        If Chrome says "File might be harmful", click <strong>"Download Anyway"</strong>.
+    </div>
 
-    <img src="https://i.ibb.co/R9M4XFv/poster.png" alt="Grind Battle Banner" class="main-banner">
+    <div class="banner-container">
+        <img src="LOGO.png" alt="Banner" class="main-banner">
+    </div>
+    
+    <footer>
+        <p class="footer-note">v1.0.2 • SAFE & SECURE</p>
+        <a href="privacy.html" class="privacy-link">Privacy Policy & Terms</a>
+    </footer>
 
 </body>
 </html>
